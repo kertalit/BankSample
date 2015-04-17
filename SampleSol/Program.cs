@@ -7,6 +7,8 @@ namespace SampleSol
 {
     class Program
     {
+        //just comment
+        //will see it on github
         static void Main(string[] args)
         {
             string user_1 = "user1";
