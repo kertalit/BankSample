@@ -1,0 +1,5 @@
+E:\Программирование зачёт\CSCours\SampleSol\SampleSol\bin\Debug\SampleSol.exe
+E:\Программирование зачёт\CSCours\SampleSol\SampleSol\bin\Debug\SampleSol.pdb
+E:\Программирование зачёт\CSCours\SampleSol\SampleSol\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Программирование зачёт\CSCours\SampleSol\SampleSol\obj\x86\Debug\SampleSol.exe
+E:\Программирование зачёт\CSCours\SampleSol\SampleSol\obj\x86\Debug\SampleSol.pdb
