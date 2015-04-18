@@ -21,31 +21,48 @@ namespace SampleSol
             int Account_2 = 1657561;
             int AccBalance1 = 25000;
             int AccBalance2 = 35000;
+            string username = "";
+            int AccBalance = 0;
+            int Account = 0;
+            string feedback = "";
 
             while (true)
-            {
-                Console.WriteLine("Enter username");
-                string username = Console.ReadLine();
-
-                if (username == "q" || username == "quit" || username == "exit")
-                    break;
-
-                if (username == user_1)
+            {               
+                    Console.WriteLine("Enter username");
+                    username = Console.ReadLine();
+                    
+                    if (username == "q" || username == "quit" || username == "exit")
+                        break;
+                                     
+                if (username == user_1 || username == user_2)
                 {
+                
                     while (true)
                     {
-                        Console.WriteLine("1. Account");
-                        Console.WriteLine("2. Promoutions");
-                        Console.WriteLine("3. Feedback");
-                        Console.WriteLine("4. Exit");
+                        if (username == user_1)
+                        {
+                            feedback_1 = feedback;
+                            AccBalance = AccBalance1;
+                            Account = Account_1;
+                        }
+                        if (username == user_2)
+                        {
+                            feedback_2 = feedback;
+                            AccBalance = AccBalance2;
+                            Account = Account_2;
+                        }     
+                    Console.WriteLine("1. Account");
+                    Console.WriteLine("2. Promoutions");
+                    Console.WriteLine("3. Feedback");
+                    Console.WriteLine("4. Exit");
 
-                        Console.Write("\n>");
-                        string choice = Console.ReadLine();
+                    Console.Write("\n>");
+                    string choice = Console.ReadLine();
 
                         if (choice == "1")
                         {
-                            Console.WriteLine("Account ID: " + Account_1);
-                            Console.WriteLine("Balance: " + AccBalance1);
+                            Console.WriteLine("Account ID: " + Account);
+                            Console.WriteLine("Balance: " + AccBalance);
                         }
 
                         if (choice == "2")
@@ -57,50 +74,15 @@ namespace SampleSol
                         {
                             Console.WriteLine("Submenu Feedback");
                             Console.Write("\nFB:>");
-                            feedback_1 = Console.ReadLine();
+                            feedback = Console.ReadLine();
                         }
 
                         if (choice == "4")
                         {
                             break;
                         }
-                    }
-                }
-                if (username == user_2)
-                {
-                    while (true)
-                    {
-                        Console.WriteLine("1. Account");
-                        Console.WriteLine("2. Promoutions");
-                        Console.WriteLine("3. Feedback");
-                        Console.WriteLine("4. Exit");
-
-                        Console.Write("\n>");
-                        string choice = Console.ReadLine();
-
-                        if (choice == "1")
-                        {
-                            Console.WriteLine("Account ID: " + Account_2);
-                            Console.WriteLine("Balance: " + AccBalance2);
-                        }
-
-                        if (choice == "2")
-                        {
-                            Console.WriteLine("Submenu Promoutions");
-                        }
-
-                        if (choice == "3")
-                        {
-                            Console.WriteLine("Submenu Feedback");
-                            Console.Write("\nFB:>");
-                            feedback_2 = Console.ReadLine();
-                        }
-
-                        if (choice == "4")
-                        {
-                            break;
-                        }
-                    }
+                                                       
+                     }
                 }
                 if (username == admin)
                 {
@@ -121,8 +103,7 @@ namespace SampleSol
                     }
 
                 }
-                
             }
-        }   
-    }
+         }   
+     }
 }
