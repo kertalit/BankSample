@@ -7,103 +7,37 @@ namespace SampleSol
 {
     class Program
     {
-        //just comment
-        //will see it on github
         static void Main(string[] args)
         {
-            string user_1 = "user1";
-            string user_2 = "user2";
-            string admin = "admin";
-            //string user_3 = "user3";
-            string feedback_1 = "";
-            string feedback_2 = "";
-            int Account_1 = 156573;
-            int Account_2 = 1657561;
-            int AccBalance1 = 25000;
-            int AccBalance2 = 35000;
-            string username = "";
-            int AccBalance = 0;
-            int Account = 0;
-            string feedback = "";
+            const int MAX_USERS = 50000;
+            string[] names = new string[MAX_USERS];
+
+
+            for( int i = 0; i < 4; ++i)
+            {
+                names[i] = "user" + (i+1);
+            }
+            int freeIndex = 4;
 
             while (true)
-            {               
-                    Console.WriteLine("Enter username");
-                    username = Console.ReadLine();
-                    
-                    if (username == "q" || username == "quit" || username == "exit")
-                        break;
-                                     
-                if (username == user_1 || username == user_2)
+            {
+                string data = Console.ReadLine();
+
+                if (data == "q")
+                    break;
+                else
                 {
-                
-                    while (true)
-                    {
-                        if (username == user_1)
-                        {
-                            feedback_1 = feedback;
-                            AccBalance = AccBalance1;
-                            Account = Account_1;
-                        }
-                        if (username == user_2)
-                        {
-                            feedback_2 = feedback;
-                            AccBalance = AccBalance2;
-                            Account = Account_2;
-                        }     
-                    Console.WriteLine("1. Account");
-                    Console.WriteLine("2. Promoutions");
-                    Console.WriteLine("3. Feedback");
-                    Console.WriteLine("4. Exit");
-
-                    Console.Write("\n>");
-                    string choice = Console.ReadLine();
-
-                        if (choice == "1")
-                        {
-                            Console.WriteLine("Account ID: " + Account);
-                            Console.WriteLine("Balance: " + AccBalance);
-                        }
-
-                        if (choice == "2")
-                        {
-                            Console.WriteLine("Submenu Promoutions");
-                        }
-
-                        if (choice == "3")
-                        {
-                            Console.WriteLine("Submenu Feedback");
-                            Console.Write("\nFB:>");
-                            feedback = Console.ReadLine();
-                        }
-
-                        if (choice == "4")
-                        {
-                            break;
-                        }
-                                                       
-                     }
-                }
-                if (username == admin)
-                {
-                    while (true)
-                    {
-                        Console.WriteLine("1. Watch feedback");
-                        Console.WriteLine("2. Exit");
-                        string choice = Console.ReadLine();
-
-                        if (choice == "1")
-                        {
-                            Console.WriteLine(user_1 + ": " + feedback_1);
-                            Console.WriteLine(user_2 + ": " + feedback_2);
-                        }
-
-                        if (choice == "2")
-                            break;
-                    }
-
+                    names[freeIndex] = data;
+                    freeIndex++;
                 }
             }
-         }   
+
+            for (int i = 0; i < freeIndex; ++i)
+            {
+                Console.WriteLine("user: " + names[i]);                
+            }
+        }   
      }
 }
+
+
